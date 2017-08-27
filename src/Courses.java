@@ -1,9 +1,11 @@
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 class Courses{
     private Map<String,ArrayList<String> > data;
     public Courses(){
+        data=new HashMap<>();
         data.clear();
     }
     public void addHeader(String header){

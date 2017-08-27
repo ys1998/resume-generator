@@ -1,6 +1,7 @@
 
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 class Brief {
 
@@ -13,6 +14,7 @@ class Brief {
         processed = false;
         deg = "B.Tech";
         programme[0] = programme[1] = programme[2] = "";
+        data=new HashMap<>();
         data.clear();
     }
 
