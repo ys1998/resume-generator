@@ -1,4 +1,4 @@
-# Resume Generator
+# Resume Generator [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
 ## An Ubuntu-based Java application for generating resume with IIT-B header
 ### Installation 
 Download the `.zip` file and then extract it, or clone this repository using the following command
