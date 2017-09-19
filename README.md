@@ -1,4 +1,4 @@
-# Resume-Generator
+# Resume Generator
 ## An Ubuntu-based Java application for generating resume with IIT-B header
 ### Installation 
 Download the `.zip` file and then extract it, or clone this repository using the following command
