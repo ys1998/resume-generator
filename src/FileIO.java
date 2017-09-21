@@ -32,7 +32,7 @@ class FileIO{
             out.close();
         }
     }
-    public static Object read(String filepath) throws IOException{
+    public static Object read(String filepath) throws IOException, ClassNotFoundException{
         // simply returns the object stored in specified file - object is then type-casted to required type before using
         ObjectInputStream in=new ObjectInputStream(new FileInputStream(filepath));
         Object res=in.readObject();

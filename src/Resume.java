@@ -8,16 +8,8 @@ class Window{
     private JLabel status;
     
     private JTabbedPane menu;
-    private JPanel academic;
-    private JPanel courses;
-    private JPanel extracurricular;
-    private JPanel header; // would contain both header.java and brief.java information
-    private JPanel por;
-    private JPanel projects;
-//    private JPanel skills;
-//    private JPanel technical;
     
-    // Data storage containers
+    // Data storage containers; GUI implemented within each class separately
     private Academic academic_data;
     private Courses courses_data;
     private Header header_data;
@@ -45,12 +37,12 @@ class Window{
         status=new JLabel("Ready to run.");
         
         menu=new JTabbedPane();
-        academic=new JPanel();
-        courses=new JPanel();
-        extracurricular=new JPanel();
-        header=new JPanel();
-        por=new JPanel();
-        projects=new JPanel();
+//        academic=new JPanel();
+//        courses=new JPanel();
+//        extracurricular=new JPanel();
+//        header=new JPanel();
+//        por=new JPanel();
+//        projects=new JPanel();
 //        skills=new JPanel();
 //        technical=new JPanel();
         
@@ -60,9 +52,9 @@ class Window{
         parent.setResizable(false);
         
         // header
-        
+                
         // academic
-        
+           
         // technical
         
         // projects
@@ -77,14 +69,14 @@ class Window{
         
         // creating tabs for each section
         ImageIcon icon=new ImageIcon(""); // empty icon
-        menu.addTab("Header",icon,header,"Information for the resume's header");
-        menu.addTab("Academic",icon,academic,"Your academic achievements");
+//        menu.addTab("Header",icon,header_data.panel(),"Information for the resume's header");
+        menu.addTab("Academic",icon,academic_data.panel(),"Your academic achievements");
         //menu.addTab("Technical",icon,technical,"Your technical achievements");
-        menu.addTab("Projects",icon,projects,"Your list of completed projects");
+//        menu.addTab("Projects",icon,projects_data.panel(),"Your list of projects");
         //menu.addTab("Skills",icon,skills,"Relevant skills you have");
-        menu.addTab("Courses",icon,courses,"Relevant courses undertaken by you");
-        menu.addTab("PoRs",icon,por,"Positions of Responsibility");
-        menu.addTab("ExtraCurricular",icon,extracurricular,"Your extra-curricular achievements");
+//        menu.addTab("Courses",icon,courses_data.panel(),"Relevant courses undertaken by you");
+//        menu.addTab("PoRs",icon,por_data.panel(),"Positions of Responsibility");
+//        menu.addTab("ExtraCurricular",icon,extracurricular_data.panel(),"Your extra-curricular achievements");
         
         
         // initializing and displaying the window
