@@ -1,12 +1,17 @@
 import java.awt.BorderLayout;
 import javax.swing.*;
-import java.awt.Event.*;
+import java.awt.event.*;
+import java.io.IOException;
 
 class Window{
     // GUI components
     private JFrame parent;
     private JLabel status;
     
+    private JMenuBar mb;
+    private JMenu opt;
+    private JMenuItem save;
+    private JMenuItem load;
     private JTabbedPane menu;
     
     // Data storage containers; GUI implemented within each class separately
@@ -16,11 +21,21 @@ class Window{
     private Projects projects_data;
     private ExtraCurricular extracurricular_data;
     private PoR por_data;
-//    private Skills skills_data;
-//    private Technical technical_data;
+    //private Skills skills_data;
+    //private Technical technical_data;
     
-    // button click listener classes
-    
+    class ClickListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e){
+            String command=e.getActionCommand();
+            if("save".equals(command)){
+                academic_data.save();
+                System.out.println("Saved.");
+            }else if("load".equals(command)){
+                
+            }
+        }
+    }
     public Window(){
         // initializing data containers
         academic_data=new Academic();
@@ -36,37 +51,26 @@ class Window{
         parent=new JFrame("Resume Generator | By Yash Shah");
         status=new JLabel("Ready to run.");
         
+        mb=new JMenuBar();
+        opt=new JMenu("Options");
+        save=new JMenuItem("Save entered data");
+        save.setActionCommand("save");
+        save.addActionListener(new ClickListener());
+        load=new JMenuItem("Load existing data");
+        load.setActionCommand("load");
+        load.addActionListener(new ClickListener());
         menu=new JTabbedPane();
-//        academic=new JPanel();
-//        courses=new JPanel();
-//        extracurricular=new JPanel();
-//        header=new JPanel();
-//        por=new JPanel();
-//        projects=new JPanel();
-//        skills=new JPanel();
-//        technical=new JPanel();
         
         // miscellaneous actions on parent frame
         parent.setLayout(new BorderLayout());
         parent.setSize(800,600);
         parent.setResizable(false);
         
-        // header
+        opt.add(save);
+        opt.add(load);
+        mb.add(opt);
+        parent.add(mb,BorderLayout.NORTH);
                 
-        // academic
-           
-        // technical
-        
-        // projects
-        
-        // skills
-        
-        // courses
-        
-        // por
-        
-        // extracurricular        
-        
         // creating tabs for each section
         ImageIcon icon=new ImageIcon(""); // empty icon
 //        menu.addTab("Header",icon,header_data.panel(),"Information for the resume's header");

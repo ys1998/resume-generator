@@ -7,7 +7,7 @@ import java.io.IOException;
 class FileIO{
     public static void store(Object o) throws IOException{
         if(o.getClass()==Academic.class){
-            ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream("data/Academic.dat"));
+            ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream("../data/Academic.ser"));
             out.writeObject(o);
             out.close();
         }else if(o.getClass()==Courses.class){
