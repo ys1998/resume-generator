@@ -26,7 +26,7 @@ class Window{
     
     class ClickListener implements ActionListener {
         @Override
-        public void actionPerformed(ActionEvent e){
+        public void actionPerformed(ActionEvent e) {
             String command=e.getActionCommand();
             if("save".equals(command)){
                 academic_data.save();
